@@ -4,6 +4,8 @@
     <title>Heroku!</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="lib/SLDS0121/assets/styles/salesforce-lightning-design-system.css">
+    <!-- Salesforce Web to Lead用 -->
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
   </head>
   <body>
     <div class="slds">
@@ -20,11 +22,28 @@
         <main class="slds-col slds-size--1-of-1">
           <!-- Message Box -->
           <div class="slds-box slds-m-around--small">
-            <p>Heroku &amp; Salesforce Web to Read Sample.</p>
+            <p>Heroku &amp; Salesforce Web to Lead Sample.</p>
           </div>
           <!-- Web2ReadForm Box -->
           <div class="slds-box slds-m-around--small">
             <!-- Web to Read From -->
+            <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+              <input type=hidden name="oid" value="00DA0000000a2k2">
+              <input type=hidden name="retURL" value="https://tyoshikawa1106-web-to-lead.herokuapp.com/thanks">
+              <!--  ----------------------------------------------------------------------  -->
+              <!--  注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。        -->
+              <!--  <input type="hidden" name="debug" value=1>                              -->
+              <!--  <input type="hidden" name="debugEmail"                                  -->
+              <!--  value="tyoshikawa1106@gmail.com">                                       -->
+              <!--  ----------------------------------------------------------------------  -->
+              <label for="first_name">名</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+              <label for="last_name">姓</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+              <label for="email">メール</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+              <label for="company">会社名</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+              <label for="city">市区郡</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>  
+              <label for="state">都道府県</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
+              <input type="submit" name="submit">
+            </form>
           </div>
         </main>
       </div>

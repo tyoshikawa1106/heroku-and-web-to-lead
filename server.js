@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/public'));
 
 //ルーティング設定
 app.get('/thanks', function (req, res) {
-  res.send('Thank you!');
+  res.send('Thank you!! 登録ありがとう！！');
 });
 
 // Serve your app

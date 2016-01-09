@@ -29,8 +29,9 @@
             <!-- Web to Read From -->
             <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
               
-              <input type=hidden name="oid" value="00DA0000000a2k2">
-              <input type=hidden name="retURL" value="https://tyoshikawa1106-web-to-lead.herokuapp.com/thanks">
+              <!-- Web to リード設定情報 -->
+              <input type=hidden name="oid" value="<Your Salesforce Org ID>">
+              <input type=hidden name="retURL" value="<Your Return URL>">
               
               <!--  ----------------------------------------------------------------------  -->
               <!--  注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。        -->
